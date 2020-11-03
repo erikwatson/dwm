@@ -8,7 +8,7 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int horizpadbar        = 5;        /* horizontal padding for statusbar */
 static const int vertpadbar         = 10;        /* vertical padding for statusbar */
-static const char *fonts[]          = { "Open Sans:size=10", "Material Design Icons:size=14" };
+static const char *fonts[]          = { "Open Sans:size=10", "Material Design Icons:size=14", "Font Awesome 5 Free Regular:size=14", "Font Awesome 5 Free Solid:size=14", "Font Awesome 5 Free Brands:size=14" };
 static const char dmenufont[]       = "Open Sans:size=10";
 static const char col_gray1[]       = "#1d1f21";
 static const char col_gray2[]       = "#E3E3E3";
@@ -27,7 +27,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "󰞷", "󰊪", "󰈹", "󰓓", "󰓇" };
+static const char *tags[] = { "󰞷", "󰈹", "󰓓", "󰓇" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -47,11 +47,11 @@ static const int resizehints = 0;    /* 1 means respect size hints in tiled resi
 #include "fibonacci.c"
 static const Layout layouts[] = {
 	/* symbol     arrange function */
- 	{ "[\\]",     dwindle },
-	{ "[]=",      tile },    /* first entry is default */
- 	{ "[@]",      spiral },
-	{ "[M]",      monocle },
-	{ "><>",      NULL },    /* no layout function means floating behavior */
+ 	{ "",     dwindle }, /* first entry is default */
+	{ "",      tile },
+        { "",      spiral },
+	{ "",      monocle },
+	{ "",      NULL },    /* no layout function means floating behavior */
 };
 
 /* key definitions - Mod1Mask = left alt, Mod4Mask = left super */
